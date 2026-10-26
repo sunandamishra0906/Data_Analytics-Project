@@ -1,0 +1,351 @@
+{
+ "n_raw": 1320,
+ "p_raw": 20,
+ "dups": 0,
+ "missing": {
+  "Energy_kWh": 66,
+  "Rate_kW": 66,
+  "Distance_km": 66
+ },
+ "invalid": {
+  "SoC > 100 %": 32,
+  "Temperature > 45 C (US cities)": 8,
+  "Battery capacity < 20 or > 150 kWh": 16
+ },
+ "invalid_total": 55,
+ "flags": {
+  "flag_soc_drop": 256,
+  "flag_energy_gt_cap": 175,
+  "flag_time_mismatch": 1096,
+  "flag_dur_outlier": 5,
+  "flag_tod_mismatch": 961
+ },
+ "strict_n": 874,
+ "n_clean": 1265,
+ "n_vars_final": 32,
+ "desc": {
+  "Duration_h": {
+   "count": 1265.0,
+   "mean": 2.26,
+   "median": 2.24,
+   "std": 1.05,
+   "min": 0.1,
+   "max": 6.77
+  },
+  "Energy_kWh": {
+   "count": 1265.0,
+   "mean": 42.65,
+   "median": 42.29,
+   "std": 21.94,
+   "min": 0.05,
+   "max": 152.24
+  },
+  "Cost_USD": {
+   "count": 1265.0,
+   "mean": 22.6,
+   "median": 22.21,
+   "std": 10.75,
+   "min": 0.23,
+   "max": 69.41
+  }
+ },
+ "by": {
+  "Level 1": {
+   "Duration_h": {
+    "count": 442.0,
+    "mean": 2.22,
+    "median": 2.18,
+    "std": 1.06
+   },
+   "Energy_kWh": {
+    "count": 442.0,
+    "mean": 41.71,
+    "median": 42.29,
+    "std": 21.99
+   },
+   "Cost_USD": {
+    "count": 442.0,
+    "mean": 21.63,
+    "median": 20.85,
+    "std": 10.32
+   }
+  },
+  "Level 2": {
+   "Duration_h": {
+    "count": 410.0,
+    "mean": 2.29,
+    "median": 2.3,
+    "std": 1.04
+   },
+   "Energy_kWh": {
+    "count": 410.0,
+    "mean": 45.21,
+    "median": 46.09,
+    "std": 21.34
+   },
+   "Cost_USD": {
+    "count": 410.0,
+    "mean": 22.41,
+    "median": 21.63,
+    "std": 10.68
+   }
+  },
+  "DC Fast Charger": {
+   "Duration_h": {
+    "count": 413.0,
+    "mean": 2.27,
+    "median": 2.26,
+    "std": 1.05
+   },
+   "Energy_kWh": {
+    "count": 413.0,
+    "mean": 41.11,
+    "median": 40.25,
+    "std": 22.3
+   },
+   "Cost_USD": {
+    "count": 413.0,
+    "mean": 23.83,
+    "median": 24.0,
+    "std": 11.17
+   }
+  }
+ },
+ "max_abs_corr_core": 0.05502338368280615,
+ "rho_energy_cost": [
+  -0.014534596317714652,
+  0.605529072220599
+ ],
+ "rho_energy_dur": [
+  0.03820596510705118,
+  0.17445802209135447
+ ],
+ "shapiro": {
+  "Level 1": [
+   0.9677754538658738,
+   2.788065290029698e-08
+  ],
+  "Level 2": [
+   0.9691383922376666,
+   1.3051144357458376e-07
+  ],
+  "DC Fast Charger": [
+   0.9679842270420232,
+   7.425011745955031e-08
+  ]
+ },
+ "levene": [
+  0.06410683047575326,
+  0.9379078514350352
+ ],
+ "anova": {
+  "F": 0.5424592319585988,
+  "p": 0.5814523844770715,
+  "df1": 2,
+  "df2": 1262,
+  "eta2": 0.0008589434075712034
+ },
+ "welch": {
+  "F": 0.5384830819762314,
+  "p": 0.5838343046376905
+ },
+ "kruskal": {
+  "H": 1.5161907951523972,
+  "p": 0.4685579943915068,
+  "eps2": 0.0
+ },
+ "tukey": [
+  {
+   "g1": "DC Fast Charger",
+   "g2": "Level 1",
+   "diff": -0.0573,
+   "p": 0.706,
+   "lo": -0.2262,
+   "hi": 0.1117,
+   "reject": false
+  },
+  {
+   "g1": "DC Fast Charger",
+   "g2": "Level 2",
+   "diff": 0.0129,
+   "p": 0.983,
+   "lo": -0.1592,
+   "hi": 0.185,
+   "reject": false
+  },
+  {
+   "g1": "Level 1",
+   "g2": "Level 2",
+   "diff": 0.0702,
+   "p": 0.5942,
+   "lo": -0.0991,
+   "hi": 0.2394,
+   "reject": false
+  }
+ ],
+ "ci": {
+  "Level 1": [
+   2.217680509086763,
+   2.118441702477716,
+   2.3169193156958103
+  ],
+  "Level 2": [
+   2.2878473588057933,
+   2.186573249739825,
+   2.3891214678717616
+  ],
+  "DC Fast Charger": [
+   2.274930582051165,
+   2.173334053119449,
+   2.376527110982881
+  ]
+ },
+ "min_detectable_f": 0.08737541734810883,
+ "min_detectable_eta2": 0.0075766201265169185,
+ "sens": {
+  "strict": {
+   "n": 874,
+   "anova_p": 0.5380589946428851,
+   "kw_p": 0.472654301553895
+  },
+  "no_out": {
+   "n": 1260,
+   "anova_p": 0.5147993920656982,
+   "kw_p": 0.4415831788660364
+  },
+  "raw": {
+   "n": 1320,
+   "anova_p": 0.803157328779078,
+   "kw_p": 0.5920439661789416
+  },
+  "non_imp": {
+   "n": 1202,
+   "anova_p": 0.5624608972963588,
+   "kw_p": 0.44087487214794274
+  }
+ },
+ "secondary": {
+  "Energy_kWh": {
+   "F": 3.683135930299164,
+   "p_anova": 0.02542892294929007,
+   "H": 7.373160846733754,
+   "p_kw": 0.02505754188861706
+  },
+  "Cost_USD": {
+   "F": 4.591989128788653,
+   "p_anova": 0.01030257861644697,
+   "H": 7.682885035358595,
+   "p_kw": 0.021462618796967096
+  }
+ },
+ "arm_params": {
+  "sup": 0.04,
+  "conf": 0.4,
+  "lift": 1.1,
+  "n_items": 31,
+  "n_itemsets": 821
+ },
+ "arm_itemsets_by_k": {
+  "1": 31,
+  "2": 410,
+  "3": 380
+ },
+ "arm_rules_conf": 383,
+ "arm_rules_sel": 81,
+ "arm_top": [
+  {
+   "ant": "Charger=Level 2 & Energy=Low",
+   "con": "User=Commuter",
+   "support": 0.049,
+   "confidence": 0.521,
+   "lift": 1.458
+  },
+  {
+   "ant": "Duration=High & Time=Evening",
+   "con": "Energy=High",
+   "support": 0.042,
+   "confidence": 0.465,
+   "lift": 1.394
+  },
+  {
+   "ant": "Charger=DC Fast Charger & Duration=Medium",
+   "con": "User=Long-Distance Traveler",
+   "support": 0.051,
+   "confidence": 0.461,
+   "lift": 1.382
+  },
+  {
+   "ant": "Charger=Level 2 & User=Casual Driver",
+   "con": "Energy=High",
+   "support": 0.044,
+   "confidence": 0.459,
+   "lift": 1.376
+  },
+  {
+   "ant": "Cost=High & User=Casual Driver",
+   "con": "Charger=DC Fast Charger",
+   "support": 0.047,
+   "confidence": 0.44,
+   "lift": 1.349
+  },
+  {
+   "ant": "Charger=DC Fast Charger & User=Long-Distance Traveler",
+   "con": "Duration=Medium",
+   "support": 0.051,
+   "confidence": 0.448,
+   "lift": 1.347
+  },
+  {
+   "ant": "Energy=High & Time=Evening",
+   "con": "Duration=High",
+   "support": 0.042,
+   "confidence": 0.449,
+   "lift": 1.346
+  },
+  {
+   "ant": "Charger=DC Fast Charger & User=Casual Driver",
+   "con": "Cost=High",
+   "support": 0.047,
+   "confidence": 0.44,
+   "lift": 1.32
+  }
+ ],
+ "arm_max_lift": 1.4581319253365064,
+ "arm_charger_rules": [
+  {
+   "ant": "Charger=Level 2 & Energy=Low",
+   "con": "User=Commuter",
+   "support": 0.049,
+   "confidence": 0.521,
+   "lift": 1.458
+  },
+  {
+   "ant": "Charger=DC Fast Charger & Duration=Medium",
+   "con": "User=Long-Distance Traveler",
+   "support": 0.051,
+   "confidence": 0.461,
+   "lift": 1.382
+  },
+  {
+   "ant": "Charger=Level 2 & User=Casual Driver",
+   "con": "Energy=High",
+   "support": 0.044,
+   "confidence": 0.459,
+   "lift": 1.376
+  },
+  {
+   "ant": "Cost=High & User=Casual Driver",
+   "con": "Charger=DC Fast Charger",
+   "support": 0.047,
+   "confidence": 0.44,
+   "lift": 1.349
+  },
+  {
+   "ant": "Charger=DC Fast Charger & User=Long-Distance Traveler",
+   "con": "Duration=Medium",
+   "support": 0.051,
+   "confidence": 0.448,
+   "lift": 1.347
+  }
+ ]
+}
